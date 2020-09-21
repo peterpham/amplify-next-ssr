@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "npx serverless"
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^0.2.21",

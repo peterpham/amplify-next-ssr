@@ -1,30 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Amplify + NextJS with SSR
 
-## Getting Started
+This is a sample project to use Amplify JS Library with NextJS with serverside rendering
+Read more https://aws.amazon.com/blogs/mobile/ssr-support-for-aws-amplify-javascript-libraries/
 
-First, run the development server:
+IMPORTANT: This is not meant for Amplify Console deployment. The deployment will build NextJS project (using serverless framework), and deploy to S3 bucket and CloudFront.
 
-```bash
-npm run dev
-# or
-yarn dev
+
+### Set up
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Develop locally
+```
+npm run dev
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Deploy (via serverless)
 
-## Learn More
+```
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+IMPORTANT: 
+- Before running this command, make sure to uncheck "Block all public access" in account settings.
+- When CloudFront distribution is created for the first time, it will take some time to deploy. Go to CloudFront console to check if the distribution is successful deployed before opening the CloudFront URL
